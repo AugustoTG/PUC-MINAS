@@ -1,0 +1,28 @@
+header{
+    background-color: aliceblue
+}
+#conteiner{
+    background-color: bisque;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+article{
+    width: 33%;
+    min-width: 350px;
+}
+.destaque{
+    /*consegue aumentar o tamanho da box*/
+    flex-grow: 2;
+}
+/*ordena as divs */
+.not4{
+    order: 1
+}
+
+.not1, .not3, .not5{
+    order: 2
+}
+.not2, .not6{
+    order: 3
+}

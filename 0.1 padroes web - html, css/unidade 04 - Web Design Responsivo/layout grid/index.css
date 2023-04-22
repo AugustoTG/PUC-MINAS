@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -6,14 +7,24 @@
 img{
     height: 120px;
     display: block;
+    margin: 0 auto;
 }
 .menuPrincipal{
     display: block;
+    text-align: center;
+}
+.menuPrincipal > ul {
+   list-style: nome;
+   background: lightgray;
+   padding: 5px;
 }
 .menuPrincipal > ul > li {
     display:block;
     padding:  10px;
     background: white;
+    border-color: rgba(0, 0, 0, 0.473);
+    border-style:solid;
+    
 }
 .box-lateral > ul{
     list-style: nome;
@@ -21,5 +32,63 @@ img{
     padding: 5px;
 }
 
+.menuPrincipal > ul > li:hover {
+    border: 1px;
+  
+}
 
+.box-lateral > form {
+    list-style: nome;
+    background: lightgray;
+    padding: 5px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cabecalho" "conteudo" "periferico" "rodape";
+    grid-gap: 5px 0px;
+}
 
+header {
+    grid-area: cabecalho;
+}
+
+aside{
+    grid-area: periferico;
+}
+
+main{
+    grid-area: conteudo;
+}
+
+@media (min-width: 700px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 150px 1fr 120px;
+        grid-template-areas: "cabecalho cabecalho" 
+                            "periferico conteudo" 
+                            "rodape rodape";
+        grid-gap: 5px 10px;
+    }
+    img{
+        width: 220px;
+        float: left;
+    }
+    .menuPrincipal{
+        float: right;
+    }
+    .menuPrincipal > ul >li {
+        display: inline-block;
+    }
+    main{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    article {
+        width: 30%;
+        min-width: 250px;
+        flex-grow: 2;
+    }
+}

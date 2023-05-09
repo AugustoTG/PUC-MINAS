@@ -1,7 +1,11 @@
-
+const backgroud = document.querySelector('body');
 const execute = ()=>{
     alert('Hello Word');
 }
 
-const backgroud = document.querySelector('body');
-backgroud.style.background = #fff655
+const changeColor = ()=>{
+    const text = document.querySelector('#text');
+    text.addEventListener('mouseover', ()=> {backgroud.style.background = "#fff655"});
+    text.addEventListener('mouseout', ()=> {backgroud.style.background = "green"});
+}
+window.load = changeColor()

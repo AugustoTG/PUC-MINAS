@@ -12,8 +12,9 @@ const changeColor = ()=>{
 }
 changeColor()
 
-
-    window.onload = ()=>{
-        const date = new Date();
-        hour.innerHTML = date.toLocaleString('pt-br', {dateStyle: 'full', timeStyle: 'short'});
-    }
+window.onload = ()=>{
+    setInterval(function(){
+    const date = new Date();
+    hour.innerHTML = date.toLocaleString('pt-br', {dateStyle: 'full', timeStyle: 'short'})
+}, 1000);
+}

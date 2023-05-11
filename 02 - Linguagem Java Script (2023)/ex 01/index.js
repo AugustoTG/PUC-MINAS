@@ -13,7 +13,7 @@ const changeColor = ()=>{
 changeColor()
 
 
-(function(){
-    hour = new Data();
-
-})()
+    window.onload = ()=>{
+        const date = new Date();
+        hour.innerHTML = date.toLocaleString('pt-br', {dateStyle: 'full', timeStyle: 'short'});
+    }

@@ -8,4 +8,5 @@ const changeColor = ()=>{
     text.addEventListener('mouseover', ()=> {backgroud.style.background = "#fff655"});
     text.addEventListener('mouseout', ()=> {backgroud.style.background = "green"});
 }
-window.load = changeColor()
+changeColor()
+

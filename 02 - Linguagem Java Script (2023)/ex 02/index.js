@@ -1,5 +1,8 @@
+const plus = document.querySelector('#plus').value;
+const less = document.querySelector('#less');
+const number = document.querySelector('h1')
 
-const plusNumber = document.querySelector('#plus');
-const lessNumber = document.querySelector('#less');
-
-console.log(lessNumber)
+const display = ()=>{
+    
+    number.innerText = Number.number ++
+}

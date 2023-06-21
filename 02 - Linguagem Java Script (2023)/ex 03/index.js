@@ -1,6 +1,5 @@
 
 const sliderShow = document.querySelector('.sliderShow')
-
 const img = [
     'img/biel-morro-kcKiBcDTJt4-unsplash.jpg',
     'img/f1.jpg',
@@ -10,16 +9,20 @@ const img = [
     'img/f5.jpg',
     'img/f6.jpg',
 ]
-const time = 500;
-const changeImg = ()=>{
-    
-    const i = 0;
-    sliderShow.setAttribute("src", img[i]);
+
+let i = 0;
+function changeImg(){
+    sliderShow.setAttribute('src', img[i]);
     if(i < img.length - 1){
-        i++
+        i++;
     }else{
         i=0;
-    }      
-    setInterval(changeImg(), time)
+    }
+    console.log(i)
+    setTimeout(changeImg(), 50000);
 }
-window.onload = changeImg
+window.onload = changeImg; 
+
+
+
+

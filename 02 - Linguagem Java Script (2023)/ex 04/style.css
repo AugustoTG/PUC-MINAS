@@ -1,0 +1,24 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+button{
+    padding: 5px
+}
+
+.box{
+    max-width: 600px;
+    max-height: auto;
+}

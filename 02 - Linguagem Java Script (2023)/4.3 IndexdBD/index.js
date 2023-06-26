@@ -22,3 +22,24 @@ reqBD.onupgradeneeded = (e) =>{
         bd.createObjectStore('livros', {keyPath: 'id'})
     }
 }
+
+function incluir(){
+    let id = document.querySelector('#idlivro');
+    let titulo = document.querySelector('#titulo');
+    let autor = document.querySelector('#autor');
+
+    let livro = {
+        id: id.value,
+        titulo: titulo.value,
+        autor: autor.value,
+    }
+    let trasacaoBD = bd.trasaction(['livros'], 'readwrite');
+    let livrosOS = trasacaoBD.objectStore('livros');
+    let reqOS = livrosOS.add(livros);
+    reqOS.onsuccess = (e) =>{
+        console.log(reqOS.result)
+    }
+    reqOS.onerror = (e) =>{
+        console.log(reqOS.error);
+    }
+}

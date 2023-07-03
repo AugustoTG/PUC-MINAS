@@ -1,0 +1,30 @@
+.caixa{
+    width: 50px;
+    height: 50px;
+    background-color: #b9f;
+    border: 2px solid black;
+}
+#zona1{
+    float: left;
+    margin-right: 2em;
+    border: thick dashed;
+    height: 100px;
+    width: 100px;
+    border-color: #f33;
+    margin-top: 5em;
+}
+#zona2{
+    float: left;
+    margin-right: 2em;
+    border: thick dashed;
+    height: 100px;
+    width: 100px;
+    border-color: #33f;
+    margin-top: 5em;
+}
+.zonaOver{
+    opacity: 0.5;
+}
+.color{
+    background-color: aquamarine;
+}
